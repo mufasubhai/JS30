@@ -96,6 +96,30 @@
   </div>
 
 <script>
+  const inputs = document.querySelectorAll('.inbox input[type="checkbox"]')
+
+  let lastChecked;
+
+
+  function handleCheck(e) {
+    
+    lastChecked = this;
+    console.log(lastChecked)
+
+  }
+
+  inputs.forEach(input => input.addEventListener('click', handleCheck))
+  console.log(inputs)
+
+
+  document.addEventListener('keydown', e => {
+    
+    if (e.keyCode === 16) {
+
+    console.log('butts')
+    }
+
+  })
 </script>
 </body>
 </html>
