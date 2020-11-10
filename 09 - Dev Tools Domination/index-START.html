@@ -20,27 +20,50 @@
     // Regular
 
     // Interpolated
-
+    console.log('Hello I am a %s string', 'butt')
     // Styled
 
+    console.log('%c I am some great text', 'font-size:20px; background:purple;')
+
     // warning!
-
+    console.warn("poop")
     // Error :|
-
+    console.error('poopitypoop')
     // Info
-
+    console.info('poop is brown')
+    // doesn't appear to be that effective
     // Testing
-
+    const p = document.querySelector('p');
+    console.assert(1===2,'that is wrong, butthead')
     // clearing
-
+    console.clear()
     // Viewing DOM Elements
-
+    console.dir(p)
+    console.clear()
     // Grouping together
+    dogs.forEach(dog => {
+      console.group(`{dog.name}`)
+      console.log(dog.name);
+      console.log(`${dog.name} is ${dog.age} years old`)
+      console.log(`${dog.name} is ${dog.age * 7 } years old in dog years`)
+      console.groupEnd(`{dog.name}`)
+    })
+
 
     // counting
-
+    console.count('Adrian')
+    console.count('Adrian')
+    console.count('Patrick')
+    console.count('Adrian')
+  console.count('Patrick')
+    console.count('Patrick')
+    console.count('Adrian')
+    console.count('Adrian')
     // timing
 
+
+    console.time('poop');
+    console.timeEnd('poop')
   </script>
 </body>
 </html>
