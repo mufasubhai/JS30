@@ -102,24 +102,37 @@
 
 
   function handleCheck(e) {
-    
-    lastChecked = this;
-    console.log(lastChecked)
+    // console.log(e)
+    // lastChecked = this;
+    // console.log(lastChecked)
+    let inBetween = false;
+    if (e.shiftKey && this.checked) {
+      inputs.forEach(input => {
+        // console.log(input)
+        if (input === this || input === lastChecked) {
+          inBetween = !inBetween
+        }
 
+        if (inBetween) {
+          input.checked = true;
+        }
+      })
+    } 
+    lastChecked = this;
   }
 
   inputs.forEach(input => input.addEventListener('click', handleCheck))
-  console.log(inputs)
+  // console.log(inputs)
 
 
-  document.addEventListener('keydown', e => {
+  // document.addEventListener('keydown', e => {
     
-    if (e.keyCode === 16) {
+  //   if (e.keyCode === 16) {
 
-    console.log('butts')
-    }
+  //   console.log('butts')
+  //   }
 
-  })
+  // })
 </script>
 </body>
 </html>
